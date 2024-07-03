@@ -1,19 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'thuthesis-example.blg'
-[91] biber-MSWIN64:340> INFO - === 
-[118] Biber.pm:419> INFO - Reading 'thuthesis-example.bcf'
-[249] Biber.pm:979> INFO - Found 34 citekeys in bib section 0
-[263] Biber.pm:4419> INFO - Processing section 0
-[274] Biber.pm:4610> INFO - Looking for bibtex file 'ref/refs.bib' for section 0
-[307] bibtex.pm:1713> INFO - LaTeX decoding ...
-[345] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/refs.bib'
-[711] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[712] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[712] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[712] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[737] bbl.pm:660> INFO - Writing 'thuthesis-example.bbl' with encoding 'UTF-8'
-[759] bbl.pm:763> INFO - Output to thuthesis-example.bbl
-[759] Biber.pm:131> WARN - legacy year field '1865（清同治四年）' in entry 'wangfuzhi1865songlun' is not an integer - this will probably not sort properly.
-[759] Biber.pm:131> WARN - book entry 'wangfuzhi1865songlun' (ref/refs.bib): Invalid format '1865（清同治四年）' of date field 'date' - ignoring
-[759] Biber.pm:131> WARN - legacy year field '1957/1990' in entry 'tushuguan1957tushuguanxue' is not an integer - this will probably not sort properly.
-[759] Biber.pm:133> INFO - WARNINGS: 3
+[98] biber-MSWIN64:340> INFO - === 
+[127] Biber.pm:419> INFO - Reading 'thuthesis-example.bcf'
+[260] Biber.pm:979> INFO - Found 14 citekeys in bib section 0
+[275] Biber.pm:4419> INFO - Processing section 0
+[287] Biber.pm:4610> INFO - Looking for bibtex file 'ref/refs.bib' for section 0
+[323] bibtex.pm:1713> INFO - LaTeX decoding ...
+[427] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/refs.bib'
+[670] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[670] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[670] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[670] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[681] bbl.pm:660> INFO - Writing 'thuthesis-example.bbl' with encoding 'UTF-8'
+[700] bbl.pm:763> INFO - Output to thuthesis-example.bbl
