@@ -3,9 +3,15 @@
 % 中英文摘要和关键字
 
 \begin{abstract}
-  拓扑优化利用计算手段优化材料分布，旨在获得预期性能并满足特定约束的结构，是现代智能制造领域的重要设计方法。然而，拓扑优化过程中产生的结构通常具有非常复杂的几何与拓扑特征，给结构的表示、分析和优化都带来了极大的挑战。本工作利用隐式表示灵活性和可微分性的特点，针对不同的结构设计目标和约束，以提高算法效率和应用可扩展性为目的，开展了以下创新性研究工作：
+拓扑优化利用计算手段优化材料分布，旨在获得预期性能并满足特定约束的结构，是现代智能制造领域的重要设计方法。然而，拓扑优化过程中产生的结构通常具有非常复杂的几何与拓扑特征，给结构的表示、分析和优化都带来了极大的挑战。本工作利用隐式表示灵活性和可微分性的特点，针对不同的结构设计目标和约束，以提高算法效率和应用可扩展性为目的，开展了以下创新性研究工作：
   
-（1）为解决拓扑优化方法中分析和迭代周期长的问题，本文提出一种创新数据驱动的拓扑优化框架，IF-TONIR，
+（1）传统显式方法在设计多样化、轻量化和物理可靠的薄壳结构时仍存在诸多挑战，针对于次，本文通过开发一种新颖的隐式设计框架，实现了在薄壳结构上的高效雕刻设计。基于参数化表示的雕刻模板（包括规则、非规则和个性化三种），本文通过优化模板尺寸和方向等参数，达到在指定材料消耗下的结构刚度最大化。本文的方法通过完全的隐式函数操作完成结构的表示、分析和优化，避免了传统有限元方法中繁琐耗时的重新网格化步骤，极大地提高了薄壳结构的设计效率。
+
+（2）空心化通过从三维模型内部体积中去除材料来实现轻量化，同时还可保持可行的机械性能。然而，空心化模型在增材制造过程中往往需要额外的支撑材料，大大抵消了轻量化效果。本文提出了两种创新方法以解决该问题：第一种使用基于椭球体的连续函数表示，设计和优化自然具有自支撑性的空心化结构，本文提出了一种高效的优化策略，以确定椭球空腔的形状、位置和拓扑结构，旨在实现最小化材料成本、最大化结构刚度和确保自支撑性等多种目标；第二种通过一种高效的可微分通道设计框架，以连通空心腔体使其能够顺利导出打印过程中残留在腔体内的制造材料。
+
+（3）拓扑优化较高的计算复杂性和周期较长的迭代过程严重影响了效率，这给其实际应用都带来了严重阻碍。为了解决这一挑战，本文提出了创新框架IF-TONIR，利用神经网络隐式表示复杂结构形状，并基于数据驱动的方式实现端到端的拓扑优化，能够从不同设计域的不同边界条件直接预测最优化结构。此外，本文提出了基于持续同调技术的拓扑损失函数来训练网络模型，有效惩罚了预测结构中断裂的存在，从而提高了生成结构的整体物理可靠性。
+
+本文研究提出的基于隐式方法的复杂结构表示、分析和优化方法，具有计算效率高、设计效率高和适用性强等优点，有望在工程设计领域得到广泛应用，推动相关领域的技术进步。
 
   % 关键词用“英文逗号”分隔，输出时会自动处理为正确的分隔符
   \thusetup{
@@ -14,19 +20,18 @@
 \end{abstract}
 
 \begin{abstract*}
-  An abstract of a dissertation is a summary and extraction of research work and contributions.
-  Included in an abstract should be description of research topic and research objective, brief introduction to methodology and research process, and summary of conclusion and contributions of the research.
-  An abstract should be characterized by independence and clarity and carry identical information with the dissertation.
-  It should be such that the general idea and major contributions of the dissertation are conveyed without reading the dissertation.
+Topology optimization utilizes computational methods to optimize material distribution, aiming to obtain structures with expected performance and specific constraints. It is an important design method in the field of modern intelligent manufacturing. However, the structures generated during the topology optimization process often have very complex geometric and topological features, posing great challenges to the representation, analysis, and optimization of the structures. This work leverages the flexibility and differentiability of implicit representations to address different structural design objectives and constraints, with the goal of improving algorithmic efficiency and application scalability. The following innovative research work has been carried out:
 
-  An abstract should be concise and to the point.
-  It is a misunderstanding to make an abstract an outline of the dissertation and words “the first chapter”, “the second chapter” and the like should be avoided in the abstract.
+(1) Traditional explicit methods still face many challenges when designing diverse, lightweight, and physically reliable thin-shell structures. To address this, this paper develops a novel implicit design framework to achieve efficient carving design on thin-shell structures. Based on parameterized carving templates (including regular, irregular, and personalized types), this paper optimizes template size, orientation, and other parameters to maximize structural stiffness under specified material consumption. The method in this paper completes the representation, analysis, and optimization of the structure through fully implicit function operations, avoiding the tedious and time-consuming remeshing steps in traditional finite element methods, greatly improving the design efficiency of thin-shell structures.
 
-  Keywords are terms used in a dissertation for indexing, reflecting core information of the dissertation.
-  An abstract may contain a maximum of 5 keywords, with semi-colons used in between to separate one another.
+(2) Hollowing achieves lightweight design by removing material from the internal volume of three-dimensional models while maintaining feasible mechanical performance. However, hollowed models often require additional support materials during the additive manufacturing process, greatly offsetting the lightweight effect. This paper proposes two innovative methods to solve this problem: The first uses a continuous function representation based on ellipsoids to design and optimize naturally self-supporting hollowed structures. An efficient optimization strategy is proposed to determine the shape, position, and topological structure of ellipsoidal cavities, aiming to achieve multiple objectives such as minimizing material cost, maximizing structural stiffness, and ensuring self-supportability. The second method uses an efficient differentiable channel design framework to connect hollow cavities, allowing for smooth extraction of manufacturing materials remaining inside the cavities during the printing process.
+
+(3) The high computational complexity and long iterative process of topology optimization seriously affect efficiency, posing significant obstacles to its practical application. To address this challenge, this paper proposes an innovative framework, IF-TONIR, which utilizes neural networks to implicitly represent complex structural shapes and achieves end-to-end topology optimization based on a data-driven approach, enabling direct prediction of optimized structures from different design domains and boundary conditions. Furthermore, this paper proposes a topology loss function based on persistent homology techniques to train the network model, effectively penalizing the existence of discontinuities in the predicted structures, thus improving the overall physical reliability of the generated structures.
+
+The complex structure representation, analysis, and optimization methods based on implicit approaches proposed in this research have advantages such as high computational efficiency, high design efficiency, and strong applicability. They are expected to be widely applied in the field of engineering design, promoting technological progress in related fields.
 
   % Use comma as separator when inputting
   \thusetup{
-    keywords* = {keyword 1, keyword 2, keyword 3, keyword 4, keyword 5},
+    keywords* = {Topology Optimization, Implicit Representations, Variational Auto-Encoder, Thin-Shell Structures, Self-Supporting Structures},
   }
 \end{abstract*}

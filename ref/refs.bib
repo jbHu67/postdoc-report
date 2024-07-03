@@ -330,3 +330,838 @@
   year       = {1983},
   medium     = {DK},
 }
+
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output.
+%%%                        It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+%Entries
+
+@inproceedings{Carr2001,
+  author    = {Carr, J. C. and Beatson, R. K. and Cherrie, J. B. and Mitchell, T. J. and Fright, W. R. and McCallum, B. C. and Evans, T. R.},
+  booktitle = {Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques - SIGGRAPH '01},
+  title     = {Reconstruction and Representation of 3D Objects with Radial Basis Functions},
+  pages     = {67--76},
+  year      = {2001},
+  publisher = {ACM Press}
+}
+
+@article{Gandy2001,
+  author  = {Gandy, Paul J F and Bardhan, Sonny and Mackay, Alan L and Klinowski, Jacek},
+  journal = {Chmical Physics Letters},
+  number  = {3},
+  pages   = {187-195},
+  title   = {Nodal surface approximations to the P , G , D and I-WP triply periodic minimal surfaces},
+  volume  = {336},
+  year    = {2001}
+}
+
+@inproceedings{Zhang2017,
+	title = {Thermal-{Comfort} {Design} of {Personalized} {Casts}},
+	urldate = {2021-09-07},
+	booktitle = {Proceedings of the 30th {Annual} {ACM} {Symposium} on {User} {Interface} {Software} and {Technology}},
+	publisher = {ACM},
+	author = {Zhang, Xiaoting and Fang, Guoxin and Dai, Chengkai and Verlinden, Jouke and Wu, Jun and Whiting, Emily and Wang, Charlie C.L.},
+	year = {2017},
+	pages = {243--254},
+}
+@article{Rao2019,
+	title = {Consistently fitting orthopedic casts},
+	volume = {71},
+	journal = {Computer Aided Geometric Design},
+	author = {Rao, Cong and Tian, Lihao and Yan, Dong-Ming and Liao, Shenghui and Deussen, Oliver and Lu, Lin},
+	year = {2019},
+	pages = {130--141},
+}
+@article{Darren2018,
+	title = {Generalised primal-dual grids for unstructured co-volume schemes},
+	journal = {Journal of Computational Physics},
+	volume = {375},
+	pages = {155-176},
+	year = {2018},
+	author = {Darren, Engwirda},
+}
+
+@article{Bendsoe1989,
+  title={Optimal shape design as a material distribution problem},
+  author={Bends{\o}e, Martin P},
+  journal={Structural optimization},
+  volume={1},
+  number={4},
+  pages={193--202},
+  year={1989}
+}
+
+
+@article{Guo2016,
+	author = {Weisheng Zhang and Jie Yuan and Jian Zhang and Xu Guo},
+	journal = {Struct Multidisc Optim},
+	pages = {1243-1260},
+	title = {A new topology optimization approach based on Moving Morphable Components (MMC) and the ersatz material model},
+	volume = {53},
+	year = {2016}
+}
+
+@ARTICLE{Hu2020,
+	author={Hu, Jiangbei and Wang, Shengfa and Li, Baojun and Li, Fengqi and Luo, Zhongxuan and Liu, Ligang},
+	journal={IEEE Transactions on Visualization and Computer Graphics}, 
+	title={Efficient Representation and Optimization for TPMS-Based Porous Structures}, 
+	year={2020},
+	volume={},
+	number={},
+	pages={1-1},
+}
+
+@article{Nguyen2010,
+	author = {Nguyen, Tam H. and Paulino, Glaucio H. and Song, Junho and Le, Chau H.},
+	journal = {Structural and Multidisciplinary Optimization},
+	number = {4},
+	pages = {525--539},
+	title = {{A computational paradigm for multiresolution topology optimization (MTOP)}},
+	volume = {41},
+	year = {2010}
+}
+
+@article{Liu2018MMC,
+	author = {Liu, Chang and Zhu, Yichao and Sun, Zhi and li, Dingding and Du, Zongliang and Zhang, Weisheng and Guo, Xu},
+	year = {2018},
+	title = {An efficient Moving Morphable Component (MMC)-based approach for multi-resolution topology optimization},
+	journal = {Structural and Multidisciplinary Optimization},
+	volume = {58},
+	number = {6},
+	pages={2455-2479}
+}
+
+@article{Svanberg2002,
+	author = {Svanberg, Krister},
+	title = {A Class of Globally Convergent Optimization Methods Based on Conservative Convex Separable Approximations},
+	journal = {SIAM Journal on Optimization},
+	volume = {12},
+	number = {2},
+	pages = {555-573},
+	year = {2002},
+}
+
+@book{bendsoe2003,
+	title={Topology optimization: theory, methods, and applications},
+	author={Bendsoe, Martin Philip and Sigmund, Ole},
+	year={2003},
+	publisher={Springer Science \& Business Media}
+}
+
+@article{Chen2016,
+	title = {Synthesis of Filigrees for Digital Fabrication},
+	author = {Chen, Weikai and Zhang, Xiaolong and Xin, Shiqing and Xia, Yang and Lefebvre, Sylvain and Wang, Wenping},
+	year = {2016},
+	journal = {ACM Transactions on Graphics},
+	volume = {35},
+	number = {4},
+	pages = {1--13}
+}
+@article{Pietroni2015,
+	title = {Statics {{Aware Grid Shells}}},
+	author = {Pietroni, Nico and Tonelli, Davide and Puppo, Enrico and Froli, Maurizio and Scopigno, Roberto and Cignoni, Paolo},
+	year = {2015},
+	journal = {Computer Graphics Forum},
+	volume = {34},
+	number = {2},
+	pages = {627--641}
+}
+
+
+@article{Yang2019,
+	title = {Binary {{Image Carving}} for {{3D Printing}}},
+	author={Yang, Jingru and He, Sha and Lu Lin},
+	year = {2019},
+	journal = {Computer-Aided Design},
+	volume = {114},
+	pages = {191--201},
+	publisher = {{Elsevier}}
+}
+
+@article{stadlbauer2020,
+	title = {Interactive {{Modeling}} of {{Cellular Structures}} on {{Surfaces}} with {{Application}} to {{Additive Manufacturing}}},
+	author = {Stadlbauer, Pascal and Mlakar, Daniel and Seidel, H-P and Steinberger, Markus and Zayer, Rhaleb},
+	year = {2020},
+	journal = {Computer Graphics Forum},
+	volume = {39},
+	number = {2},
+	pages = {277--289},
+}
+
+@article{Sven1991,
+	title = {A simple algorithm for computing the smallest enclosing circle},
+	journal = {Information Processing Letters},
+	volume = {37},
+	number = {3},
+	pages = {121-125},
+	year = {1991},
+	author = {Sven Skyum}
+}
+
+@article{Dumas2015,
+  title = {By-Example Synthesis of Structurally Sound Patterns},
+  author = {Dumas, J{\'e}r{\'e}mie and Lu, An and Lefebvre, Sylvain and Wu, Jun and Dick, Christian},
+  year = {2015},
+  journal = {ACM Transactions on Graphics},
+  volume = {34},
+  number = {4},
+  pages = {1--12}
+}
+
+@article{Peng2018,
+  title = {Designing Patterns Using Triangle-Quad Hybrid Meshes},
+  author = {Peng, Chi-Han and Pottmann, Helmut and Wonka, Peter},
+  year = {2018},
+  journal = {ACM Transactions on Graphics},
+  volume = {37},
+  number = {4},
+  pages = {1--14}
+}
+@article{Zehnder2016,
+  title = {Designing Structurally-Sound Ornamental Curve Networks},
+  author = {Zehnder, Jonas and Coros, Stelian and Thomaszewski, Bernhard},
+  year = {2016},
+  journal = {ACM Transactions on Graphics},
+  volume = {35},
+  number = {4},
+  pages = {1--10}
+}
+
+@article{perez2017,
+  title={Computational design and automated fabrication of kirchhoff-plateau surfaces},
+  author={P{\'e}rez, Jes{\'u}s and Otaduy, Miguel A and Thomaszewski, Bernhard},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={36},
+  number={4},
+  pages={1--12},
+  year={2017}
+}
+
+@article{bermano2017,
+  title={State of the art in methods and representations for fabrication-aware design},
+  author={Bermano, Amit H and Funkhouser, Thomas and Rusinkiewicz, Szymon},
+  journal={Computer Graphics Forum},
+  volume={36},
+  number={2},
+  pages={509--535},
+  year={2017}
+}
+
+@article{bickel2018,
+  title={State of the art on stylized fabrication},
+  author={Bickel, Bernd and Cignoni, Paolo and Malomo, Luigi and Pietroni, Nico},
+  journal={Computer Graphics Forum},
+  volume={37},
+  number={6},
+  pages={325--342},
+  year={2018}
+}
+
+@article{Liu2020,
+  title={Fabricable dihedral Escher tessellations},
+  author={Liu, Xiaokang and Lu, Lin and Sharf, Andrei and Yan, Xin and Lischinski, Dani and Tu, Changhe},
+  journal={Computer-Aided Design},
+  volume={127},
+  pages={1--10},
+  year={2020}
+}
+
+@article{Ahsan2018,
+  title = {Honeycomb Pattern on Thin Wall Object with Grain Based 3d Printing},
+  author = {Ahsan, AMM Nazmul and Khoda, Bashir},
+  year = {2018},
+  journal = {Procedia Manufacturing},
+  volume = {26},
+  pages = {900--911}
+}
+@article{marsalek2020,
+  title = {Modeling and {{Testing}} of {{Flexible Structures}} with {{Selected Planar Patterns Used}} in {{Biomedical Applications}}},
+  author = {Marsalek, Pavel and Sotola, Martin and Rybansky, David and Repa, Vojtech and Halama, Radim and Fusek, Martin and Prokop, Jiri},
+  year = {2020},
+  journal = {Materials},
+  volume = {14},
+  number = {1},
+  pages = {140}
+}
+@article{Wang2013,
+ author = {Wang, Weiming and Wang, Tuanfeng and Yang, Zhouwang and Liu, Ligang and Liu, Xiuping},
+ title = {Cost-effective printing of 3D objects with skin-frame structures},
+ journal = {ACM Transactions on Graphics},
+ volume = {32},
+ number = {6},
+ pages = {177:1-177:10},
+ year = {2013}
+}
+@article{ZHANG2015,
+title = "Medial axis tree - an internal supporting structure for 3D printing",
+author = "Zhang, Xiaolong and  Xia, Yang and Wang, Jiaye and Yang, Zhouwang and  Tu, Changhe and  Wang, Wenping",
+journal = "Computer Aided Geometric Design",
+volume = "35-36",
+pages = "149-162",
+year = "2015"
+}
+@article{Chai2018,
+author={Shuangming Chai and Baiyu Chen and Mengyu Ji and Zhouwang Yang and Manfred Lau and Xiao-Ming Fu and Ligang Liu},
+journal={Graphical Models},
+title={Stress-Oriented Structural Optimization for Frame Structures},
+pages = {80-88},
+volume={97},
+year={2018}
+}
+@article{Lu:2014,
+ author = {Lu, Lin and Sharf, Andrei and Zhao, Haisen and Wei, Yuan and Fan, Qingnan and Chen, Xuelin and Savoye, Yann and Tu, Changhe and Cohen-Or, Daniel and Chen, Baoquan},
+ title = {Build-to-last: Strength to weight 3D Printed Objects},
+ journal = {ACM Transactions on Graphics},
+ volume = {33},
+ number = {4},
+ year = {2014},
+ pages = {97:1-97:10}
+}
+@article{Kuipers2019,
+author = {Kuipers, Tim and Wu, Jun and Wang, Charlie C.L.},
+journal = {Computer Aided Design},
+pages = {37--50},
+title = {{CrossFill: Foam Structures with Graded Density for Continuous Material Extrusion}},
+volume = {114},
+year = {2019}
+}
+
+@article{Hollister2005,
+author = {Hollister, Scott J and Mater, Nat},
+journal={Natural Materials},
+pages = {518-524},
+title = {Porous scaffold design for tissue},
+volume={4},
+year = {2005}
+}
+
+@article{Schroeder2005,
+author = {Schroeder, Craig and Regli, William C and Shokoufandeh, Ali and Sun, Wei},
+journal={Computer Aided Design},
+pages = {339-353},
+title = {Computer-aided design of porous artifacts},
+volume = {37},
+year = {2005}
+}
+@article{schumacher2018b,
+  title={Set-in-stone: worst-case optimization of structures weak in tension},
+  author={Schumacher, Christian and Zehnder, Jonas and B{\"a}cher, Moritz},
+  journal={ACM Transactions on Graphics},
+  pages={252:1-252:13},
+  year={2018},
+  volume={37},
+  number={6}
+}
+@article{Prevost:2013,
+ author = {Prevost, Romain and Whiting, Emily and Lefebvre, Sylvain and Sorkine-Hornung, Olga},
+ title = {Make it stand: Balancing shapes for 3D fabrication},
+ journal = {ACM Transactions on Graphics},
+ volume = {32},
+ number = {4},
+ year = {2013},
+ pages = {81:1-81:10}
+}
+@article{Bacher:2014,
+ author = {Bacher, Moritz and Whiting, Emily and Bickel, Bernd and Sorkine-Hornung, Olga},
+ title = {Spin-it:Optimizing moment of inertia for spinnable objects},
+ journal = {ACM Transactions on Graphics},
+ volume = {33},
+ number = {4},
+ year = {2014},
+ pages = {96:1-96:10}
+}
+@article{Skouras:2013,
+ author = {Skouras, Melina and Thomaszewski, Bernhard and Coros, Stelian and Bickel, Bernd and Gross, Markus},
+ title = {Computational design of actuated deformable characters},
+ journal = {ACM Transactions on Graphics},
+ volume = {32},
+ number = {4},
+ year = {2013},
+ pages = {82:1-82:10}
+}
+@article{allaire1997,
+  title={Shape optimization by the homogenization method},
+  author={Allaire, Gr{\'e}goire and Bonnetier, Eric and Francfort, Gilles and Jouve, Fran{\c{c}}ois},
+  journal={Numerische Mathematik},
+  volume={76},
+  number={1},
+  pages={27-68},
+  year={1997}
+}
+
+
+@article{Wang2003,
+author = {Wang, Michael Yu and Wang, Xiaoming and Guo, Dongming},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+number = {1-2},
+pages = {227--246},
+title = {A level set method for structural topology optimization},
+volume = {192},
+year = {2003}
+}
+
+@article{xie1993,
+author = {Xie, Yi and Steven, Grant},
+year = {1993},
+title = {A Simple Evolutionary Procedure for Structural Optimization},
+volume = {49},
+booktitle = {Computers and Structures},
+pages = {885-896}
+}
+
+@article{Wu2018TVCG,
+author={Wu, Jun and Aage, Niels and Westermann, R\"udiger and Sigmund, Ole},
+title={Infill Optimization for Additive Manufacturing -- Approaching Bone-like Porous Structures},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+year={2018},
+volume={24},
+number={2},
+pages={1127-1140}
+}
+
+
+@article{martinez2015,
+  title = {Structure and Appearance Optimization for Controllable Shape Design},
+  author = {Mart{\'i}nez, Jon{\`a}s and Dumas, J{\'e}r{\'e}mie and Lefebvre, Sylvain and Wei, Li-Yi},
+  year = {2015},
+  journal = {ACM Transactions on Graphics},
+  volume = {34},
+  number = {6},
+  pages = {1--11}
+}
+
+@article{Wu2005,
+  title={Convexification and concavification for a general class of global optimization problems},
+  author={Wu, Zhi-You and Bai, FS and Zhang, Lian-Sheng},
+  journal={Journal of Global Optimization},
+  volume={31},
+  number={1},
+  pages={45--60},
+  year={2005}
+}
+
+@book{farshad2013,
+  title={Design and analysis of shell structures},
+  author={Farshad, Mehdi},
+  volume={16},
+  year={2013},
+  publisher={Springer Science \& Business Media}
+}
+
+@book{adriaenssens2014,
+  title={Shell structures for architecture: form finding and optimization},
+  author={Adriaenssens, Sigrid and Block, Philippe and Veenendaal, Diederik and Williams, Chris},
+  year={2014},
+  publisher={Routledge}
+}
+
+@book{melaragno2012,
+  title={An introduction to shell structures: The art and science of vaulting},
+  author={Melaragno, Michele},
+  year={2012},
+  publisher={Springer Science \& Business Media}
+}
+
+@article{bucalem1997,
+  title={Finite element analysis of shell structures},
+  author={Bucalem, ML and Bathe, Klaus-Jurgen},
+  journal={Archives of Computational Methods in Engineering},
+  volume={4},
+  number={1},
+  pages={3--61},
+  year={1997}
+}
+
+@article{panetta2019,
+  title={X-shells: A new class of deployable beam structures},
+  author={Panetta, Julian and Konakovi{\'c}-Lukovi{\'c}, MINA and Isvoranu, Florin and Bouleau, Etienne and Pauly, Mark},
+  journal={ACM Transactions on Graphics},
+  volume={38},
+  number={4},
+  pages={1--15},
+  year={2019}
+}
+
+@article{martinez2019,
+  title={Star-shaped metrics for mechanical metamaterial design},
+  author={Mart{\'\i}nez, Jon{\`a}s and Skouras, M{\'e}lina and Schumacher, Christian and Hornus, Samuel and Lefebvre, Sylvain and Thomaszewski, Bernhard},
+  journal={ACM Transactions on Graphics},
+  volume={38},
+  number={4},
+  pages={1--13},
+  year={2019}
+}
+
+@article{schumacher2018,
+  title={Mechanical characterization of structured sheet materials},
+  author={Schumacher, Christian and Marschner, Steve and Gross, Markus and Thomaszewski, Bernhard},
+  journal={ACM Transactions on Graphics},
+  volume={37},
+  number={4},
+  pages={1--15},
+  year={2018}
+}
+
+@article{liu2018,
+  title={Current and future trends in topology optimization for additive manufacturing},
+  author={Liu, Jikai and Gaynor, Andrew T and Chen, Shikui and Kang, Zhan and Suresh, Krishnan and Takezawa, Akihiro and Li, Lei and Kato, Junji and Tang, Jinyuan and Wang, Charlie CL and others},
+  journal={Structural and Multidisciplinary Optimization},
+  volume={57},
+  number={6},
+  pages={2457--2483},
+  year={2018}
+}
+
+@article{wang2017,
+  title={Support-free hollowing},
+  author={Wang, Weiming and Liu, Yong-Jin and Wu, Jun and Tian, Shengjing and Wang, Charlie CL and Liu, Ligang and Liu, Xiuping},
+  journal={IEEE Transactions on Visualization and Computer Graphics},
+  volume={24},
+  number={10},
+  pages={2787--2798},
+  year={2017}
+}
+
+@article{jiang2014,
+  title={Freeform honeycomb structures},
+  author={Jiang, Caigui and Wang, Jun and Wallner, Johannes and Pottmann, Helmut},
+  journal={Computer Graphics Forum},
+  volume={33},
+  number={5},
+  pages={185--194},
+  year={2014}
+}
+
+@article{cheng2019,
+  title={Functionally graded lattice structure topology optimization for the design of additive manufactured components with stress constraints},
+  author={Cheng, Lin and Bai, Jiaxi and To, Albert C},
+  journal={Computer Methods in Applied Mechanics and Engineering},
+  volume={344},
+  pages={334--359},
+  year={2019}
+}
+
+@article{cirak2002,
+  title={Integrated modeling, finite-element analysis, and engineering design for thin-shell structures using subdivision},
+  author={Cirak, Fehmi and Scott, Michael J and Antonsson, Erik K and Ortiz, Michael and Schr{\"o}der, Peter},
+  journal={Computer-Aided Design},
+  volume={34},
+  number={2},
+  pages={137--148},
+  year={2002}
+}
+
+@book{jawad2012,
+  title={Theory and design of plate and shell structures},
+  author={Jawad, Maan},
+  year={2012},
+  publisher={Springer Science \& Business Media}
+}
+
+@inproceedings{yan2021,
+  title={Man-made by Computer: On-the-Fly Fine Texture 3D Printing},
+  author={Yan, Xin and Lu, Lin and Sharf, Andrei and Yu, Xing and Sun, Yulu},
+  booktitle={Symposium on Computational Fabrication},
+  pages={1--10},
+  year={2021}
+}
+
+@incollection{le2021,
+  title={Optimized binarization for eggshell carving art},
+  author={Le, Thi Ngoc Hanh and Yao, Sheng-Yi and Yeh, Chih-Kuo and Wang, Sheng-Jie and Lee, Tong-Yee},
+  booktitle={SIGGRAPH Asia 2021 Posters},
+  pages={1--2},
+  year={2021}
+}
+
+@article{schumacher2016,
+  title={Stenciling: Designing Structurally-Sound Surfaces with Decorative Patterns},
+  author={Schumacher, Christian and Thomaszewski, Bernhard and Gross, Markus},
+  journal={Computer Graphics Forum},
+  volume={35},
+  number={5},
+  pages={101--110},
+  year={2016},
+  organization={Wiley Online Library}
+}
+
+@inproceedings{li2017,
+  title={Rib-reinforced shell structure},
+  author={Li, Wei and Zheng, Anzong and You, Lihua and Yang, Xiaosong and Zhang, Jianjun and Liu, Ligang},
+  booktitle={Computer Graphics Forum},
+  volume={36},
+  number={7},
+  pages={15--27},
+  year={2017},
+  organization={Wiley Online Library}
+}
+
+@article{Zhang2014-LBC,
+ author = {Zhang, Juyong and Deng, Bailin and Liu, Zishun and Patan\`{e}, Giuseppe and Bouaziz, Sofien and Hormann, Kai and Liu, Ligang},
+ title = {Local Barycentric Coordinates},
+ journal = {ACM Trans. Graph.},
+ volume = {33},
+ number = {6},
+ year = {2014},
+} 
+
+@misc{Directional,
+author       = {Amir Vaxman and others},
+title        = {{Directional: A library for Directional Field 
+Synthesis, Design, and Processing}},
+year = 2021,
+doi          = {10.5281/zenodo.3338174},
+url          = {https://doi.org/10.5281/zenodo.3338174}
+}
+
+@article{levy2010p,
+  title={L p centroidal voronoi tessellation and its applications},
+  author={L{\'e}vy, Bruno and Liu, Yang},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={29},
+  number={4},
+  pages={1--11},
+  year={2010},
+  publisher={ACM New York, NY, USA}
+}
+
+@inproceedings{Greg2001,
+author = {Turk, Greg},
+title = {Texture Synthesis on Surfaces},
+year = {2001},
+booktitle = {Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques},
+pages = {347–354},
+numpages = {8},
+series = {SIGGRAPH '01}
+}
+
+@book{cohen2001,
+  title={Geometric modeling with splines: an introduction},
+  author={Cohen, Elaine and Riesenfeld, Richard F and Elber, Gershon},
+  year={2001},
+  publisher={CRC Press}
+}
+
+@article{leung2015,
+  title={A unified framework for isotropic meshing based on narrow-band Euclidean distance transformation},
+  author={Leung, Yuen-Shan and Wang, Xiaoning and He, Ying and Liu, Yong-Jin and Wang, Charlie CL},
+  journal={Computational Visual Media},
+  volume={1},
+  number={3},
+  pages={239--251},
+  year={2015},
+  publisher={Springer}
+}
