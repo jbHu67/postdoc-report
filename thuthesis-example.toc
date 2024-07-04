@@ -5,10 +5,18 @@
 \contentsline {section}{\numberline {1.2}研究方法}{2}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}参数化设计}{2}{subsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.1.1}图案模板设计}{2}{subsubsection.1.2.1.1}%
-\contentsline {paragraph}{规则图案。}{2}{paragraph*.16}%
+\contentsline {paragraph}{规则图案模板。}{2}{paragraph*.16}%
+\contentsline {paragraph}{非规则图案模板。}{3}{paragraph*.18}%
+\contentsline {paragraph}{个性化图案模板。}{4}{paragraph*.20}%
+\contentsline {subsubsection}{\numberline {1.2.1.2}雕刻设计}{5}{subsubsection.1.2.1.2}%
+\contentsline {paragraph}{图案模板的位置。}{5}{paragraph*.22}%
+\contentsline {paragraph}{图案模板的定向。}{6}{paragraph*.24}%
+\contentsline {paragraph}{图案模板的尺寸。}{6}{paragraph*.25}%
+\contentsline {paragraph}{薄壳雕刻操作。}{6}{paragraph*.26}%
+\contentsline {paragraph}{薄壳对偶雕刻操作。}{7}{paragraph*.27}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{参考文献}{4}{section*.17}%
-\contentsline {chapter}{致\hskip 1em\relax 谢}{5}{section*.19}%
-\contentsline {chapter}{声\hspace {1em}明}{6}{section*.21}%
-\contentsline {chapter}{个人简历、发表的学术论文与科研成果}{7}{section*.23}%
+\contentsline {chapter}{参考文献}{8}{section*.28}%
+\contentsline {chapter}{致\hskip 1em\relax 谢}{10}{section*.30}%
+\contentsline {chapter}{声\hspace {1em}明}{11}{section*.32}%
+\contentsline {chapter}{个人简历、发表的学术论文与科研成果}{12}{section*.34}%
 \contentsfinish 

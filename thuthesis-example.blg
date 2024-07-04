@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'thuthesis-example.blg'
-[98] biber-MSWIN64:340> INFO - === 
-[127] Biber.pm:419> INFO - Reading 'thuthesis-example.bcf'
-[260] Biber.pm:979> INFO - Found 14 citekeys in bib section 0
-[275] Biber.pm:4419> INFO - Processing section 0
-[287] Biber.pm:4610> INFO - Looking for bibtex file 'ref/refs.bib' for section 0
-[323] bibtex.pm:1713> INFO - LaTeX decoding ...
-[427] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/refs.bib'
-[670] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[670] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[670] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[670] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[681] bbl.pm:660> INFO - Writing 'thuthesis-example.bbl' with encoding 'UTF-8'
-[700] bbl.pm:763> INFO - Output to thuthesis-example.bbl
+[97] biber-MSWIN64:340> INFO - === 
+[123] Biber.pm:419> INFO - Reading 'thuthesis-example.bcf'
+[256] Biber.pm:979> INFO - Found 18 citekeys in bib section 0
+[269] Biber.pm:4419> INFO - Processing section 0
+[281] Biber.pm:4610> INFO - Looking for bibtex file 'ref/refs.bib' for section 0
+[315] bibtex.pm:1713> INFO - LaTeX decoding ...
+[420] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/refs.bib'
+[694] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[694] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[694] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[694] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[712] bbl.pm:660> INFO - Writing 'thuthesis-example.bbl' with encoding 'UTF-8'
+[733] bbl.pm:763> INFO - Output to thuthesis-example.bbl

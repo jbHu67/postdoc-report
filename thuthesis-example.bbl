@@ -1181,6 +1181,232 @@
       \range{pages}{15}
       \keyw{panetta2019}
     \endentry
+    \entry{cohen2001}{book}{}
+      \name{author}{3}{}{%
+        {{hash=23c23e856518f01a077b1ff305c86542}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Elaine},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8226b63c92cc339801dc688173723c1b}{%
+           family={Riesenfeld},
+           familyi={R\bibinitperiod},
+           given={Richard\bibnamedelima F},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=4366b610858934b8ccdc4501e1f5e6b1}{%
+           family={Elber},
+           familyi={E\bibinitperiod},
+           given={Gershon},
+           giveni={G\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=23c23e856518f01a077b1ff305c86542}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Elaine},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8226b63c92cc339801dc688173723c1b}{%
+           family={Riesenfeld},
+           familyi={R\bibinitperiod},
+           given={Richard\bibnamedelima F},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=4366b610858934b8ccdc4501e1f5e6b1}{%
+           family={Elber},
+           familyi={E\bibinitperiod},
+           given={Gershon},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{81105899c8e1a103b4fad273864aeb6c}
+      \strng{fullhash}{f7d68f2fc971c0c31075fc20d9073a04}
+      \strng{bibnamehash}{f7d68f2fc971c0c31075fc20d9073a04}
+      \strng{authorbibnamehash}{f7d68f2fc971c0c31075fc20d9073a04}
+      \strng{authornamehash}{81105899c8e1a103b4fad273864aeb6c}
+      \strng{authorfullhash}{f7d68f2fc971c0c31075fc20d9073a04}
+      \strng{nameabibnamehash}{f7d68f2fc971c0c31075fc20d9073a04}
+      \strng{nameanamehash}{81105899c8e1a103b4fad273864aeb6c}
+      \strng{nameafullhash}{f7d68f2fc971c0c31075fc20d9073a04}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Geometric modeling with splines: an introduction}
+      \field{usera}{M}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \keyw{cohen2001}
+    \endentry
+    \entry{Sven1991}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0693707c28a14385940fcf5755640748}{%
+           family={Skyum},
+           familyi={S\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=0693707c28a14385940fcf5755640748}{%
+           family={Skyum},
+           familyi={S\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{0693707c28a14385940fcf5755640748}
+      \strng{fullhash}{0693707c28a14385940fcf5755640748}
+      \strng{bibnamehash}{0693707c28a14385940fcf5755640748}
+      \strng{authorbibnamehash}{0693707c28a14385940fcf5755640748}
+      \strng{authornamehash}{0693707c28a14385940fcf5755640748}
+      \strng{authorfullhash}{0693707c28a14385940fcf5755640748}
+      \strng{nameabibnamehash}{0693707c28a14385940fcf5755640748}
+      \strng{nameanamehash}{0693707c28a14385940fcf5755640748}
+      \strng{nameafullhash}{0693707c28a14385940fcf5755640748}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Processing Letters}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{3}
+      \field{title}{A simple algorithm for computing the smallest enclosing circle}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{37}
+      \field{year}{1991}
+      \field{dateera}{ce}
+      \field{pages}{121\bibrangedash 125}
+      \range{pages}{5}
+      \keyw{Sven1991}
+    \endentry
+    \entry{levy2010p}{article}{}
+      \name{author}{2}{}{%
+        {{hash=326ff12222ca439a5666f727ce90e535}{%
+           family={Lévy},
+           familyi={L\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=326ff12222ca439a5666f727ce90e535}{%
+           family={Lévy},
+           familyi={L\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{7bf449f0a03820e787533c2687af9f5f}
+      \strng{fullhash}{b88c6826ea66ea7f86824a77388b5e06}
+      \strng{bibnamehash}{b88c6826ea66ea7f86824a77388b5e06}
+      \strng{authorbibnamehash}{b88c6826ea66ea7f86824a77388b5e06}
+      \strng{authornamehash}{7bf449f0a03820e787533c2687af9f5f}
+      \strng{authorfullhash}{b88c6826ea66ea7f86824a77388b5e06}
+      \strng{nameabibnamehash}{b88c6826ea66ea7f86824a77388b5e06}
+      \strng{nameanamehash}{7bf449f0a03820e787533c2687af9f5f}
+      \strng{nameafullhash}{b88c6826ea66ea7f86824a77388b5e06}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Graphics (TOG)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{4}
+      \field{title}{L p centroidal voronoi tessellation and its applications}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{29}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 11}
+      \range{pages}{11}
+      \keyw{levy2010p}
+    \endentry
+    \entry{Directional}{online}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=a67bc10e8f438f5d33e1525083956c5c}{%
+           family={Vaxman},
+           familyi={V\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
+      }
+      \true{morenamea}
+      \name{namea}{1}{}{%
+        {{hash=a67bc10e8f438f5d33e1525083956c5c}{%
+           family={Vaxman},
+           familyi={V\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{98193a525bcaf4f775887515aa3601ee}
+      \strng{fullhash}{98193a525bcaf4f775887515aa3601ee}
+      \strng{bibnamehash}{98193a525bcaf4f775887515aa3601ee}
+      \strng{authorbibnamehash}{98193a525bcaf4f775887515aa3601ee}
+      \strng{authornamehash}{98193a525bcaf4f775887515aa3601ee}
+      \strng{authorfullhash}{98193a525bcaf4f775887515aa3601ee}
+      \strng{nameabibnamehash}{98193a525bcaf4f775887515aa3601ee}
+      \strng{nameanamehash}{98193a525bcaf4f775887515aa3601ee}
+      \strng{nameafullhash}{98193a525bcaf4f775887515aa3601ee}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{{Directional: A library for Directional Field Synthesis, Design, and Processing}}
+      \field{usera}{EB}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.5281/zenodo.3338174
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.3338174
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.3338174
+      \endverb
+      \keyw{Directional}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

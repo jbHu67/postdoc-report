@@ -2920,25 +2920,6 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">ref/refs.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">adriaenssens2014</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">melaragno2012</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Pietroni2015</bcf:citekey>
-    <bcf:citekey order="2" intorder="2">Chen2016</bcf:citekey>
-    <bcf:citekey order="2" intorder="3">Liu2020</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Yang2019</bcf:citekey>
-    <bcf:citekey order="3" intorder="2">stadlbauer2020</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Zhang2017</bcf:citekey>
-    <bcf:citekey order="4" intorder="2">Rao2019</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">Dumas2015</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Pietroni2015</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">schumacher2016</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">bucalem1997</bcf:citekey>
-    <bcf:citekey order="8" intorder="2">cirak2002</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">panetta2019</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">cohen2001</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Sven1991</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">levy2010p</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Directional</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2950,13 +2931,4 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="none/global//global/global"
-                type="entry"
-                sortingtemplatename="none"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

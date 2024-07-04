@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.25)  4 JUL 2024 22:57
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.25)  4 JUL 2024 20:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**thuthesis-example
-(./thuthesis-example.tex
+**spine
+(./spine.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (./thuthesis.cls
 Document Class: thuthesis 2023/05/15 7.4.0 Tsinghua University Thesis Template
@@ -1247,32 +1247,32 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
 LaTeX Info: Redefining \inlinecite on input line 177.
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 21.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 15.
 \@quotelevel=\count519
 \@quotereset=\count520
- (./thuthesis-example.aux)
-\openout1 = `thuthesis-example.aux'.
+ (./spine.aux)
+\openout1 = `spine.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1327,27 +1327,27 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 ))
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  TU/XITSMath-Regular(1)/m/n --> TU/TimesNewRoman(0)/m/n on input line 21.
+(Font)                  TU/XITSMath-Regular(1)/m/n --> TU/TimesNewRoman(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 21.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 21.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 21.
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 21.
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 21.
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 21.
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 15.
  (d:/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 21.
-Package hyperref Info: Link coloring ON on input line 21.
- (./thuthesis-example.out) (./thuthesis-example.out)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 15.
+Package hyperref Info: Link coloring ON on input line 15.
+ (./spine.out) (./spine.out)
 \@outlinefile=\write4
-\openout4 = `thuthesis-example.out'.
+\openout4 = `spine.out'.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1358,131 +1358,45 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `thuthesis-example.bcf'.
+\openout3 = `spine.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thuthesis-example.bbl' found.
- (./thuthesis-example.bbl)
-Package biblatex Info: Reference section=0 on input line 21.
-Package biblatex Info: Reference segment=0 on input line 21.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 14.05399pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 10.54048pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 7.52892pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 14.05098pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 10.53824pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 7.52731pt on input line 25.
+Package biblatex Info: ... file 'spine.bbl' found.
+ (./spine.bbl)
+Package biblatex Info: Reference section=0 on input line 15.
+Package biblatex Info: Reference segment=0 on input line 15.
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
+* v-part:(T,H,B)=(156.49014pt, 532.06656pt, 156.49014pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=540.60239pt
+* \textheight=532.06656pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-1.13809pt
+* \headheight=76.82234pt
+* \headsep=8.5359pt
+* \topskip=12.0pt
+* \footskip=22.76228pt
+* \marginparwidth=56.9055pt
+* \marginparsep=14.22636pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package fontspec Info: Could not resolve font "SimHei/I" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "SimHei/BI" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "SimHei/I" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Font family 'SimHei(0)' created for font 'SimHei' with
-(fontspec)             options [Script={CJK},AutoFakeBold={3}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"SimHei/OT:script=hani;language=dflt;embolden=3;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-
- [1
-
-
-] [2
-
-]
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 12.04628pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 9.03471pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 7.22777pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 12.0437pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 9.03278pt on input line 25.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 7.22623pt on input line 25.
- [3] (./data/committee.tex) [4
-
-
-] (./data/abstract.tex [1
-
-
-
-] [2
-
-
-]) [3] (./thuthesis-example.toc)
-\tf@toc=\write5
-\openout5 = `thuthesis-example.toc'.
-
- [4
-
-
-] (./thuthesis-example.lof)
-\tf@lof=\write6
-\openout6 = `thuthesis-example.lof'.
-
- [5
-
-
-] (./thuthesis-example.lot)
-\tf@lot=\write7
-\openout7 = `thuthesis-example.lot'.
-
- (./data/denotation.tex [6
-
-
-]) [7
-
-
-] [8
-
-] (./data/chap2-thin-shell.tex
-第1章
-File: ./figures/thin-shell-1.png Graphic file (type bmp)
-<./figures/thin-shell-1.png>
-
-LaTeX Warning: Reference `' on page 1 undefined on input line 20.
-
-
-LaTeX Warning: Reference `' on page 1 undefined on input line 20.
-
-[1
-
-]
-File: ./figures/thin-shell-pipeline.png Graphic file (type bmp)
-<./figures/thin-shell-pipeline.png>
- [2]
-File: ./figures/multi-ellips.png Graphic file (type bmp)
-<./figures/multi-ellips.png>
-File: ./figures/iregular-pattern.png Graphic file (type bmp)
-<./figures/iregular-pattern.png>
- [3] [4]
-File: ./figures/custom-pattern.png Graphic file (type bmp)
-<./figures/custom-pattern.png>
-File: ./figures/algorithm-pipeline.png Graphic file (type bmp)
-<./figures/algorithm-pipeline.png>
- [5] [6]) [7]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -1495,8 +1409,6 @@ Package fontspec Info: Could not resolve font "FangSong/B" (it probably
 Package fontspec Info: Could not resolve font "FangSong/I" (it probably
 (fontspec)             doesn't exist).
 
-LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
-(Font)              scaled to size 12.74046pt on input line 66.
 
 Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             with options [Script={CJK}].
@@ -1508,46 +1420,48 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
-(Font)              scaled to size 11.14789pt on input line 66.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 66.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 66.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 66.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 66.
- [8
+
+Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FangSong(1)' created for font 'FangSong'
+(fontspec)             with options
+(fontspec)             [Script={CJK},Script={CJK},RawFeature={vertical}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;vertical;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+ [1
 
 
 
-] (./data/acknowledgements.tex [9]) [10
-
-
-] (./data/resume.tex [11
-
-
-]) (./data/comments.tex) (./data/resolution.tex) [12
-
-
-] (./thuthesis-example.aux)
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `thuthesis-example.out' has not changed.
-(rerunfilecheck)             Checksum: 76EF03E1EBCC82B226A0F1C0678733AD;2012.
-Package logreq Info: Writing requests to 'thuthesis-example.run.xml'.
-\openout1 = `thuthesis-example.run.xml'.
+] (./spine.aux)
+Package rerunfilecheck Info: File `spine.out' has not changed.
+(rerunfilecheck)             Checksum: C391E623EEFA95296C3F2B656CE7F8B5;63.
+Package logreq Info: Writing requests to 'spine.run.xml'.
+\openout1 = `spine.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38989 strings out of 476683
- 831840 string characters out of 5807574
- 1873012 words of memory out of 5000000
- 58616 multiletter control sequences out of 15000+600000
- 521537 words of font info for 190 fonts, out of 8000000 for 9000
+ 38009 strings out of 476683
+ 794287 string characters out of 5807574
+ 1847012 words of memory out of 5000000
+ 57777 multiletter control sequences out of 15000+600000
+ 514619 words of font info for 89 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
- 102i,16n,129p,1415b,6921s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,5n,129p,1403b,2766s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thuthesis-example.pdf (24 pages).
+Output written on spine.pdf (1 page).
