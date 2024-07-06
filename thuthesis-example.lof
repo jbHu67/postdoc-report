@@ -1,8 +1,31 @@
-\contentsline {figure}{\numberline {1.1}{\ignorespaces 基于隐式表示的 薄壳（对偶）雕刻设计优化方法\relax }}{1}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces 薄壳雕刻设计方法流程图\relax }}{2}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces 规则图案模板示例\relax }}{3}{figure.caption.17}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces 基于Voronoi结构的非规则图案模板构造示意图\relax }}{4}{figure.caption.19}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces 个性化图案模板构造示意图\relax }}{5}{figure.caption.21}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces 薄板（对偶）雕刻算法流程示意图\relax }}{6}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces 基于隐式表示的 薄壳（对偶）雕刻设计优化方法}}{1}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces 薄壳雕刻设计方法流程图}}{2}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces 规则图案模板示例}}{3}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces 基于Voronoi结构的非规则图案模板构造示意图}}{4}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces 个性化图案模板构造示意图}}{5}{figure.caption.21}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces 薄板（对偶）雕刻算法流程示意图}}{6}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces 超单元策略示意图}}{9}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces 有效性与收敛性分析}}{11}{figure.caption.29}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces 初值稳定性分析}}{11}{figure.caption.30}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces 用规则、非规则和个性化图案模板（对偶）雕刻的更多结果}}{12}{figure.caption.31}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces 本算法(a-b)和基于离散三角形的方法~\blx@tocontentsinit {0}\cite {schumacher2016}(c-d)的比较}}{12}{figure.caption.33}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces 通过3D打印制造的薄壳雕刻优化结构}}{13}{figure.caption.34}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces 真实物理受力测试}}{14}{figure.caption.35}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces 本文薄壳雕刻设计算法在医疗轻量化制造和家具设计中的应用.}}{14}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 自支撑空心化算法流程图}}{17}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 自支撑椭球体示意图}}{18}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 椭球空心化3D模型的函数表示}}{18}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces 2D视角下的自动定位示意图}}{19}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces 算法流程}}{20}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces 尺寸参数 $s$ 的影响}}{21}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces 初始结构和优化结构的应力分布比较}}{23}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces 四个模型的收敛曲线}}{23}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces 与椭圆柱体结构方法 \blx@tocontentsinit {0}\cite {lee2018support} 在相同填充比例下的比较实验 }}{24}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces 与相关自支撑空心轻量化方法的比较~\blx@tocontentsinit {0}\cite {wu2016self,xu2021support}}}{25}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces 与相关非自支撑轻量化方法~\blx@tocontentsinit {0}\cite {10.1145/2601097.2601168,hu2020efficient}的比较}}{26}{figure.caption.49}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces 相同填充比例下不同方法\blx@tocontentsinit {0}\cite {xu2021support,10.1145/2601097.2601168,wu2016self,hu2020efficient}的MVMS比较直方图}}{27}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces 不同受力方向下的优化结构}}{27}{figure.caption.52}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces 带有椭球形空腔的优化模型的3D打印结果}}{28}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces 3D打印模型的实际应力测试 }}{28}{figure.caption.54}%
 \contentsfinish 
 \contentsfinish 

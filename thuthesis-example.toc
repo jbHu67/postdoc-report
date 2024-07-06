@@ -1,5 +1,5 @@
-\contentsline {chapter}{插图清单}{V}{section*.8}%
-\contentsline {chapter}{附表清单}{VI}{section*.10}%
+\contentsline {chapter}{插图清单}{VI}{section*.8}%
+\contentsline {chapter}{附表清单}{VII}{section*.10}%
 \contentsline {chapter}{\numberline {第1章}基于隐式表示的薄壳结构雕刻设计}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}引言}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}研究方法}{2}{section.1.2}%
@@ -14,9 +14,31 @@
 \contentsline {paragraph}{图案模板的尺寸。}{6}{paragraph*.25}%
 \contentsline {paragraph}{薄壳雕刻操作。}{6}{paragraph*.26}%
 \contentsline {paragraph}{薄壳对偶雕刻操作。}{7}{paragraph*.27}%
+\contentsline {subsection}{\numberline {1.2.2}优化问题的形式和求解}{7}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}问题形式}{8}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.2}计算和优化}{8}{subsubsection.1.2.2.2}%
+\contentsline {section}{\numberline {1.3}实验和讨论}{10}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}有效性验证}{10}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}效果及比较实验}{10}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}3D打印及物理验证}{13}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}应用}{13}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}本章小结}{15}{section.1.4}%
+\contentsline {chapter}{\numberline {第2章}基于隐式表示的自支撑空心化轻量结构设计}{16}{chapter.2}%
+\contentsline {section}{\numberline {2.1}引言}{16}{section.2.1}%
+\contentsline {section}{\numberline {2.2}研究方法}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}自支撑空心结构设计}{17}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}自支撑空性化模型的函数表示}{18}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}优化问题的形式及求解}{19}{subsection.2.2.3}%
+\contentsline {paragraph}{问题的离散化。}{21}{paragraph*.43}%
+\contentsline {subsection}{\numberline {2.2.4}优化求解过程}{22}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}实验和讨论}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}有效性和效率性}{23}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}比较和讨论}{24}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}本章小结}{28}{section.2.4}%
+\contentsline {chapter}{\numberline {第3章}基于隐式神经表示的端到端拓扑优化方法}{29}{chapter.3}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{参考文献}{8}{section*.28}%
-\contentsline {chapter}{致\hskip 1em\relax 谢}{10}{section*.30}%
-\contentsline {chapter}{声\hspace {1em}明}{11}{section*.32}%
-\contentsline {chapter}{个人简历、发表的学术论文与科研成果}{12}{section*.34}%
+\contentsline {chapter}{参考文献}{30}{section*.55}%
+\contentsline {chapter}{致\hskip 1em\relax 谢}{33}{section*.57}%
+\contentsline {chapter}{声\hspace {1em}明}{34}{section*.59}%
+\contentsline {chapter}{个人简历、发表的学术论文与科研成果}{35}{section*.61}%
 \contentsfinish 

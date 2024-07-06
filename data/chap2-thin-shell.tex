@@ -17,7 +17,7 @@
 
 \section{研究方法}
 
-本方法基于结构的隐式表示设计了一种用于薄壳结构雕刻设计的参数化方法，算法流程如图~\ref{fig:thin-shell-pipeline} 所示。首先，使用函数表示构建三种类型的图案模板,包括规则图案、不规则图案和用户指定的个性化图案。这些图案模板具有可调整的属性, 例如位置、方向和大小, 可以通过参数控制(第~\ref{subsec:parametric-design}节)。然后，将这些模板图案用于壳体结构的雕刻。由于使用有向距离场（SDF）表示输入壳体，因此可以在图案模板和壳体模型之间执行函数布尔运算。最后，为了确保雕刻壳体结构的完整性，引入了结构力学问题的优化模型。以最小应变能为目标，给定体积为约束，该框架可以根据结构响应分析优化图案的属性变量。优化后的(对偶)雕刻壳体结构可以简单地用函数的零等值面表示(第~\ref{}节)。在各种壳体模型上成功实现了该算法，并进行了多组实验，验证了该框架的有效性和鲁棒性(第~\ref{}节)。
+本方法基于结构的隐式表示设计了一种用于薄壳结构雕刻设计的参数化方法，算法流程如图~\ref{fig:thin-shell-pipeline} 所示。首先，使用函数表示构建三种类型的图案模板,包括规则图案、不规则图案和用户指定的个性化图案。这些图案模板具有可调整的属性, 例如位置、方向和大小, 可以通过参数控制(第~\ref{subsec:parametric-design}节)。然后，将这些模板图案用于壳体结构的雕刻。由于使用有向距离场（SDF）表示输入壳体，因此可以在图案模板和壳体模型之间执行函数布尔运算。最后，为了确保雕刻壳体结构的完整性，引入了结构力学问题的优化模型。以最小应变能为目标，给定体积为约束，该框架可以根据结构响应分析优化图案的属性变量。优化后的(对偶)雕刻壳体结构可以简单地用函数的零等值面表示(第~\ref{sec:formulation}节)。在各种壳体模型上成功实现了该算法，并进行了多组实验，验证了该框架的有效性和鲁棒性(第~\ref{sec:experiment}节)。
 
 
 \begin{figure}[htbp]
@@ -185,3 +185,198 @@
 	\Phi^{DE}(\mathbf{r})=\max(\phi_{\mathrm{retain}}, \phi_{\mathrm{truss}}).
 \end{equation}
 类似地，提取函数$\Phi^{DE}(\mathbf{r})$的零等值面以获得对偶雕刻壳体结构，如图~\ref{fig-shellCarved}(f)所示。
+
+\subsection{优化问题的形式和求解}\label{sec:formulation}
+上述介绍的薄壳结构（对偶）雕刻设计方法可应用于各种具有物理可行性的应用，例如家具设计、医疗器械优化和轻质复合结构。而为了使设计的薄壳结构能够满足特定的物理需求，需要根据目标和约束条件对设计变量进行优化。基于隐式表示，本算法实现了基于函数计算的高效自动优化，本节将具体介绍针对机械应用的数学优化问题形式。
+
+\subsubsection{问题形式}
+结构柔度是一种衡量全局结构刚度的物理量，通常用于经典拓扑和结构优化~\cite{Bendsoe1989,Wang2003}。引入形状描述函数$\Phi(\textbf{r})$，可以定义结构柔度为
+\begin{equation}
+    \label{eq:objective_continuous}
+        I=\int_{\Omega_S}H(\Phi(\textbf{r})) \textbf{f} \cdot \textbf{u}\, dV+\int_{\Gamma_t} \textbf{t}\cdot \textbf{u}\, dS,
+\end{equation}
+其中 $\Omega_S$ 是被输入薄壳结构 $S$ 所占的区域，$ \textbf{f}$ 是施加的体积力，$\textbf{t}$ 是施加在 Neumann 边界 $\Gamma_t$ 上的表面力，$\textbf{u}$ 是位移，$H(\textbf{r})$ 是正则化的Heaviside函数~\cite{Guo2016}，如下定义， 
+\begin{equation}
+    H(x)=
+    \begin{cases}1 ,\,\,&\textrm{if}\,\,  x>\eta, \\
+    \frac{3(1-\alpha)}{4}(\frac{x}{\eta}-\frac{x^3}{3\eta^3})+\frac{(1+\alpha)}{2}, \,\,&\textrm{if}\,\,  -\eta\leq x\leq\eta, \\
+     \alpha,\,\,&\textrm{if}\,\,  x<-\eta,
+     \end{cases}
+\end{equation}
+其中，$\eta$和$\alpha$是分别控制正则化程度和全局刚度矩阵非奇异性的参数。实验中，默认设置$\alpha$为0.001，将$\eta$设置为输入壳模型最大尺寸的1/50。算法以最小化结构柔度(公式~(\ref{eq:objective_continuous}))作为优化目标，并受体积约束$\overline{V}$的约束。
+\begin{equation}
+    V=\int_{\Omega_S}H(\Phi(\textbf{r}))\,dV\leq\overline{V}, 
+\end{equation}
+考虑静态力学问题，如果给定如下固定边界约束，
+\begin{equation}
+    \textbf{u}=\overline{\textbf{u}},\,on \, \Gamma_u,
+\end{equation}
+可以用弱变分形式表示平衡方程如下，
+\begin{align}
+    \label{eq:equilibrium}
+    &\int_{\Omega_S}\,H(\Phi(\textbf{r}))\mathbb{E}: \varepsilon(\textbf{u}):\varepsilon(\textbf{v}) dV \nonumber \\
+    &=\int_{\Omega_S}H(\Phi(\textbf{r})) \textbf{f}\cdot \textbf{v}\, dV+\int_{\Gamma_t} \textbf{t}\cdot \textbf{v} \, dS,\,\forall \textbf{v} \in\mathcal{U}_{ad},
+\end{align}
+其中，$\overline{\textbf{u}}$是Dirichlet边界$\Gamma_u$上的指定位移，$\textbf{v}$是定义在$\Omega_S$上的试验函数，
+$\mathcal{U}_{ad}=\{ \textbf{v}| \textbf{v} \in W^1( \Omega_S ), \textbf{v} =\textbf{0}\,\, on\, \Gamma_u\}$，
+$W^1$是一阶Sobolev空间，
+$\varepsilon$是二阶线性应变张量，$\mathbb{E}$是由杨氏模量和泊松比定义的弹性张量。
+
+\subsubsection{计算和优化}
+雕刻后的壳体结构呈现复杂的拓扑和几何特征,从而导致计算复杂度高。基于有限元的传统优化方法需要在每次迭代中进行耗时的重新网格划分(四面体或六面体)。本文所提出的带有雕刻图案的壳体结构可以用函数表示，因此无需进行重新网格划分来表示模型。只需构建一次统一的有限元作为积分域，即可直接在函数上执行积分和导数计算。此外，采用超级单元策略~\cite{Nguyen2010,Liu2018MMC}可以加速计算。如图~\ref{fig-superelement}所示，设计域$\Omega_S$被均匀划分为称为超级单元的粗糙、规则的六面体单元，用于插值位移场。随后，每个超级单元被均匀划分为称为背景单元的较小的规则六面体单元，用于以高分辨率精确描述几何形状。利用函数进行直接计算以及采用超级单元策略的积分域，优化过程的效率远高于传统的基于有限元的方法(FEM)，尤其适用于复杂的雕刻壳体结构。
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{./figures/super-ele}
+    \caption{超单元策略示意图}
+    \label{fig-superelement}
+\end{figure}
+
+有了上述离散化方案，可以将优化问题公式~(\ref{eq:objective_continuous}-\ref{eq:equilibrium})重新表述为，
+\begin{align}
+	\label{eq:d_formulation}
+  \min_{\Theta}\,\, &\textbf{F}^T\textbf{U},\\
+  \text{s.t.:}\,\,& \textbf{KU}=\textbf{F},\\
+	&V=\frac{1}{8}\sum_{j=1}^{N_b}\sum_{l=1}^8H(\Phi_l^j)v_b \leq\overline{V},
+\end{align}
+其中， $\Theta$ 是待优化的参数。在实验中，不同图案模板具有不同的设计参数，比如规则图案模板的参数为$\Theta=\{\{L_1^i\}_{i=1}^{N_p}, \{\alpha_i\}_{i=1}^{N_p}\}$，非规则图案模板的参数为$\Theta=\{s_i\}_{i=1}^{N_p}$，个性化图案模板的参数为$\Theta=\{\{s_x^i\}_{i=1}^{N_p}, \{\alpha_i\}_{i=1}^{N_p}\}$。$\textbf{U}$是位移向量，$\textbf{F}$是节点力向量，$N_b$是背景单元的数量，$\textbf{K}$是刚度矩阵，其中第$i$个元素为
+\begin{equation}
+	\textbf{K}^i=\sum_{j=1}^{N_b}\frac{1}{8}\sum_{l=1}^8(H(\Phi_l^{ij}))\textbf{K}^0,
+\end{equation}
+其中， $\Phi_l^{ij}$ 是 $\Phi(\textbf{r})$ 在第$i$个超单元的第 $j$个背景单元中第 $l$个节点处的值， $\textbf{K}^0$ 是每个背景单元中的常矩阵，
+\begin{equation}
+	\textbf{K}^0=\varepsilon_0\textbf{B}(\textbf{r}_{ij})^T \textbf{D}^0 \textbf{B}(\textbf{r}_{ij})v_b,
+\end{equation}
+其中，$\varepsilon_0$ 是原始弹性模量， $\textbf{B}$ 是应变矩阵， $\textbf{r}_{ij}$ 是第$i$个超单元的第 $j$个背景单元中高斯积分点的坐标，$\textbf{D}^0$对应实体材料单元的本构矩阵，$v_b$是一个背景单元的体积。由于只需要在每次迭代中更新系数$\frac{1}{8}\sum_{l=1}^8H(\Phi^{ij}_l)$，因此可以在响应分析过程中高效地组装刚度矩阵$\textbf{K}$。
+
+本算法使用GCMMA~\cite{Svanberg2002,Wu2005}求解优化问题~(\ref{eq:d_formulation})，这是一种基于梯度的拓扑优化算法。
+得益于本算法的设计和表示都是基于隐式方法，可以直接在函数表示上计算目标函数和约束条件的梯度，如下所示，
+\begin{align}
+    \frac{\partial I}{\partial \Theta}
+    %&=-{\textbf{U} }^T\frac{\partial {\textbf{K}}}{\partial t_i}{\textbf{U}} \nonumber\\
+    &=-\sum_{k=1}^{N_s}\textbf{U}_k^T\left[\frac{1}{8}\sum_{j=1}^{N_b}\left(\sum_{l=1}^8 \frac{\partial H(\Phi_l^{kj})}{\partial \Theta}\right)\textbf{K}^0\right]\textbf{U}_k,\\
+    \frac{\partial V}{\partial \Theta}&=\frac{1}{8}\sum_{j=1}^{N_b}\sum_{l=1}^8\frac{\partial H(\Phi^{j}_{l})}{\partial \Theta}v_b, 
+\end{align}
+其中 $\Theta$ 是待优化参数，$N_s$ 和 $N_b$分别是超单元和背景单元的数量。经实验验证，大部分的优化都可以在120步之内收敛。
+
+\section{实验和讨论}\label{sec:experiment}
+本算法通过在各种不同模型上的测试，验证了其有效性和性能。本节将展示一些实验结果，以展示算法的优势和应用潜力。
+
+\subsection{有效性验证}
+为验证分析的有效性，对比了有限元软件ANSYS\footnote{\url{https://www.ansys.com/}}和超级单元策略在相同载荷条件下得到的应变能量图。在ANSYS中使用默认的SOLID186单元(20节点二次位移实体单元)对雕刻壳体结构进行网格划分。将结构优化问题表述为刚度最大化，比较了不同实验配置下结构的刚度值。为了公平性，采用归一化刚度 $e/e_0$ 作为结构刚度的评价指标，与Wu等人~\cite{Wu2018TVCG}的做法一致，其中 $e_0$ 为原始壳体结构的刚度。
+
+如图~\ref{fig-validity}所示，不同粗细网格比(超级单元/背景单元)的结果能量分布均与ANSYS在同样模型上的结果相当，这证明了超单元方法在刚度最小化问题上的有效性和精确性。网格单元越细致，结果越精确，但计算时间也会相应增加。图~\ref{fig-validity} (e)展示了在相同体积约束($66\%$)下，不同粗细网格比($1:8$、$1:27$和$1:64$)的优化结果。在精度和效率之间权衡，实验中默认选择粗细网格比$1:27$。
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{fig-ansys-validate.png}
+    \caption{有效性与收敛性分析}
+    \label{fig-validity}
+\end{figure*}
+
+\subsection{效果及比较实验}
+所提出的方法即使使用不同的初始值也能高效收敛。
+如图~\ref{fig-initialRobustness}所示，在相同的载荷条件和约束下，具有不同初始图案的壳体模型收敛到了相似的结果。
+为验证所提出框架的鲁棒性，如图~\ref{fig-moreresults}所示，测试了更复杂的壳体模型，包含不同类型的图案。所有实验在120次迭代内都达到了收敛。
+
+表~\ref{T:table3} 对比了ANSYS(使用传统有限元法的标准商业软件)和该方法的效果及效率。尽管与ANSYS的能量计算结果存在数值差异，但从图~\ref{fig-validity} 可以看出，相对能量分布是可比的。本算法方案能够准确地找到结构的易损区域并对其进行优化，同时，该方法的优化时间远低于ANSYS，因为省略了每次迭代中耗时的重新网格化过程。
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{fig-robustness.png}
+    \caption{初值稳定性分析}
+    \label{fig-initialRobustness}
+\end{figure*}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[height=2.5in]{./figures/fig-moreresults_a.png}
+    % \hspace{0.5cm}
+    \includegraphics[height=2.5in]{./figures/fig-moreresults_b.png}
+    % \hspace{0.5cm}
+    \includegraphics[height=2.5in]{./figures/fig-moreresults_c.png}\\
+    \makebox[0.3\linewidth]{(a) I-WP}
+    \makebox[0.3\linewidth]{(b) Catenoid}
+    \makebox[0.3\linewidth]{(c) Three-Hole Torus}\\
+    \caption{用规则、非规则和个性化图案模板（对偶）雕刻的更多结果}
+    \label{fig-moreresults}
+\end{figure*}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table*}
+  \centering
+  \setlength\tabcolsep{2pt}
+  %\fontsize{6.5}{8}\selectfont
+  \caption{本文算法与商业软件（ANSYS）在性能上的比较结果。}
+\label{T:table3}
+\resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c | c c |c c |c c |c|}
+    \hline
+    \multirow{2}{*}{模型}& \multirow{2}{*}{图案模板类型} & \multirow{2}{*}{参数个数} &\multirow{2}{*}{单元个数} &\multicolumn{2}{c|}{体积 ($mm^3$)} &\multicolumn{2}{c|}{$e/e_0$}&
+    \multicolumn{2}{c|}{耗时 (min)}&\multirow{2}{*}{迭代步数} \cr\cline{5-10}
+    & & & &原始薄壳 &雕刻薄壳 &本文算法  &ANSYS &本文算法 &ANSYS &\cr
+    \hline
+    Building  &非规则 &150 &3,040,000 &9.39 &7.51   &1.09 &1.20    &0.5  &2.5 &52\cr
+    Panton Chair &规则 &300 &2,703,584 &8.98 &6.72   &1.04 &1.20    &0.8  &3.1 &60\cr
+    I-WP   &规则  &250 &8,000,000 &35.44 &26.85   &1.12 &1.25    &2.5  &9.8 &65\cr
+    Catenoid  & 个性化 (dual) &500 &5,360,000 &46.42 &25.85   &1.52 &1.75    &1.7  &5.6 &95\cr
+     Three-Holes &个性化  &800 &1,329,160 &17.22 &13.22   &1.06 &1.18    &1.9  &6.2 &115\cr
+    \hline
+    \end{tabular}}
+\end{table*}
+
+实验还与基于离散三角形单元的方法~\cite{schumacher2016} 进行了对比对比，如图~\ref{fig-comparisonSGP}所示，该方法提出了一种基于示例纹理合成的参数化算法用于模板绘制，这是一种在离散表示上实现的显式方法。在该方法中，每个三角形单元的应变能量是恒定的，这导致了显著的精度损失。与该离散方法不同，本文方法是直接在隐式函数上实现的。受益于此，本文方法可以通过函数参数轻松控制，更加多样化，并可扩展到不同的优化问题。例如，可以优化一个对偶问题来丰富薄壳结构的多样性。本文方法在相同的体积约束(75\%)下生成的优化结构具有更大的结构刚度(较小的柔度比率$e/e_0$)。\citet{schumacher2016} 中的方法使用恒定应变三角形单元计算结构变形，因此会遭受精度损失，尤其是对于复杂几何的壳体。此外，本文方法具有更好的可控性和可扩展性，因为它是基于函数表示执行的。如图~\ref{fig-moreresults}所示，该方法将隐式框架扩展到双雕刻设计，这丰富了壳体结构的多样性。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[height=0.9in]{./figures/fig-SGP_a.png}
+    \hfill
+    \includegraphics[height=0.9in]{./figures/fig-SGP_c.png}
+    \hfill
+    \includegraphics[height=0.9in]{./figures/fig-SGP_b.png}
+    \hfill
+    \includegraphics[height=0.9in]{./figures/fig-SGP_d.png}
+    \\
+    \makebox[0.24\linewidth]{(a)$e/e_0=1.43$}\hfill
+    \makebox[0.24\linewidth]{(b)$e/e_0=1.34$}\hfill
+    \makebox[0.24\linewidth]{(c)$e/e_0=1.29$}\hfill
+    \makebox[0.24\linewidth]{(d)$e/e_0=1.10$}\hfill
+    
+    \caption{
+        本算法(a-b)和基于离散三角形的方法~\cite{schumacher2016}(c-d)的比较}
+    \label{fig-comparisonSGP}
+\end{figure}
+    
+\subsection{3D打印及物理验证}
+如图~\ref{fig-printing}所示，优化的雕刻模型可以通过3D打印很好地制造出来。为了证明实用性，如图~\ref{fig-physical_validation}所示，使用RG1-5微型计算机控制电子万能试验机对3D打印模型进行了测试。算法优化得到的结构具有良好的力学性能，可承受较大的外力，支撑腿在试验机施加800 N以上的力时才会断裂。
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[width=0.9\linewidth]{./figures/fig-printing.png}
+    \end{center}
+    \caption{通过3D打印制造的薄壳雕刻优化结构}
+    \label{fig-printing}
+\end{figure}
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=1\linewidth]{./figures/fig-Physical_validation.png}
+	\end{center}
+	\caption{真实物理受力测试}
+	\label{fig-physical_validation}
+\end{figure}
+
+
+
+\subsection{应用}
+本文所提出的薄壳雕刻设计与优化算法可以应用于各种实际可行的应用中，如图~\ref{fig-application} (a)所示，对于个性化医疗装置，该雕刻设计可以满足轻量化和散热的要求，同时保持必要的强度。该方法在生活领域的应用如图~\ref{fig-application} (b)所示，不仅实现了轻量化目的，而且大幅丰富了家具和日用品的多样性。
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.95\linewidth]{fig-application.png}
+	\end{center}
+	\caption{本文薄壳雕刻设计算法在医疗轻量化制造和家具设计中的应用.}
+	\label{fig-application}
+\end{figure}
+
+\section{本章小结}
+本章提出了一种新的参数化设计和优化方法，用于实现可行的薄壳结构。该方法通过隐式函数表示壳体和图案，因此可以将规则、非规则和个性化图案作为函数操作进行(对偶)雕刻。通过优化图案的尺寸和方向属性，并在指定的体积约束下评估参数制定设计问题，以最小化结构的应变能。由于雕刻结构由隐式函数表示，该方法可以在优化迭代过程中避免重新网格划分。通过仿真和3D打印，所提出的方法比基于传统有限元法的方法更有效，并丰富了壳体结构设计的多样性。本章节算法在复杂结构设计和优化领域做出的贡献总结如下：
+\begin{itemize}
+    \item 提出了一种基于函数的薄壳结构图案雕刻的参数化设计方法，可以通过执行函数操作直接表示和设计不同类型的图案。
+    \item 基于隐式表示，采用了高效的建模和优化方法来提高雕刻薄壳结构的刚度。直接在隐式表示上解决优化问题，无需重新网格划分。计算结果显示，该方法收敛速度很快。
+    \item 简单的函数修改可以产生不同的设计方案。该框架丰富了薄壳结构的多样性，可应用于医疗装置和家具轻量化等实际可行的应用。
+\end{itemize}
