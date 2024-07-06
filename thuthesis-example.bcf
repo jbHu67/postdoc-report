@@ -3018,6 +3018,12 @@
     <bcf:citekey order="68" intorder="2">10.1145/2601097.2601168</bcf:citekey>
     <bcf:citekey order="68" intorder="3">wu2016self</bcf:citekey>
     <bcf:citekey order="68" intorder="4">hu2020efficient</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">sigmund2013</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">bendsoe1999</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">xie1993</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">wang2003level</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">guo2014doing</bcf:citekey>
+    <bcf:citekey order="73" intorder="2">zhang2017explicit</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.3)  6 JUL 2024 16:03
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.3)  6 JUL 2024 17:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1428,14 +1428,14 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
 ] [2
 
 
-]) [3] (./thuthesis-example.toc)
+]) [3] (./thuthesis-example.toc [4
+
+
+])
 \tf@toc=\write5
 \openout5 = `thuthesis-example.toc'.
 
- [4
-
-
-] [5] (./thuthesis-example.lof)
+ [5] (./thuthesis-example.lof)
 \tf@lof=\write6
 \openout6 = `thuthesis-example.lof'.
 
@@ -1645,16 +1645,16 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `thuthesis-example.out' has not changed.
-(rerunfilecheck)             Checksum: B1C1D50C4C90CF812737E95AD935D63E;5147.
+(rerunfilecheck)             Checksum: 7EABDC8D231BAE8D06AC0D27F5DAB77C;5241.
 Package logreq Info: Writing requests to 'thuthesis-example.run.xml'.
 \openout1 = `thuthesis-example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39659 strings out of 474773
- 857765 string characters out of 5761290
- 1965842 words of memory out of 5000000
- 61128 multiletter control sequences out of 15000+600000
+ 39696 strings out of 474773
+ 859198 string characters out of 5761290
+ 1964842 words of memory out of 5000000
+ 61165 multiletter control sequences out of 15000+600000
  572403 words of font info for 253 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  106i,17n,130p,1415b,7030s stack positions out of 10000i,1000n,20000p,200000b,200000s

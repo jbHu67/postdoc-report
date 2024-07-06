@@ -1,27 +1,31 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'thuthesis-example.blg'
-[111] biber-MSWIN64:340> INFO - === 
-[150] Biber.pm:419> INFO - Reading 'thuthesis-example.bcf'
-[322] Biber.pm:979> INFO - Found 40 citekeys in bib section 0
-[338] Biber.pm:4419> INFO - Processing section 0
-[351] Biber.pm:4610> INFO - Looking for bibtex file 'ref/refs.bib' for section 0
-[428] bibtex.pm:1713> INFO - LaTeX decoding ...
-[681] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/refs.bib'
-[1390] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1390] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1390] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1390] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1429] bbl.pm:660> INFO - Writing 'thuthesis-example.bbl' with encoding 'UTF-8'
-[1486] bbl.pm:763> INFO - Output to thuthesis-example.bbl
-[1486] Biber.pm:131> WARN - Duplicate entry key: 'li2017rib' in file 'ref/refs.bib', skipping ...
-[1486] Biber.pm:131> WARN - Duplicate entry key: 'wu2017infill' in file 'ref/refs.bib', skipping ...
-[1487] Biber.pm:131> WARN - Duplicate entry key: 'schumacher2018set' in file 'ref/refs.bib', skipping ...
-[1487] Biber.pm:131> WARN - Duplicate entry key: 'gaynor2016topology' in file 'ref/refs.bib', skipping ...
-[1487] Biber.pm:131> WARN - Duplicate entry key: 'dou2020top' in file 'ref/refs.bib', skipping ...
-[1487] Biber.pm:131> WARN - legacy month field 'jul' in entry '10.1145/2601097.2601168' is not an integer - this will probably not sort properly.
-[1487] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_ffaI\8fe4c9854184545302f21ebf0d47516c_573980.utf8, line 1174, warning: undefined macro "cgforum"
-[1487] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_ffaI\8fe4c9854184545302f21ebf0d47516c_573980.utf8, line 1189, warning: undefined macro "tog"
-[1487] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_ffaI\8fe4c9854184545302f21ebf0d47516c_573980.utf8, line 1210, warning: undefined macro "cgforum"
-[1487] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_ffaI\8fe4c9854184545302f21ebf0d47516c_573980.utf8, line 1235, warning: undefined macro "cgforum"
-[1487] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_ffaI\8fe4c9854184545302f21ebf0d47516c_573980.utf8, line 1248, warning: undefined macro "tog"
-[1487] Biber.pm:133> INFO - WARNINGS: 11
+[106] biber-MSWIN64:340> INFO - === 
+[183] Biber.pm:419> INFO - Reading 'thuthesis-example.bcf'
+[390] Biber.pm:979> INFO - Found 46 citekeys in bib section 0
+[406] Biber.pm:4419> INFO - Processing section 0
+[419] Biber.pm:4610> INFO - Looking for bibtex file 'ref/refs.bib' for section 0
+[502] bibtex.pm:1713> INFO - LaTeX decoding ...
+[828] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/refs.bib'
+[1514] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1514] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1514] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1515] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1555] bbl.pm:660> INFO - Writing 'thuthesis-example.bbl' with encoding 'UTF-8'
+[1618] bbl.pm:763> INFO - Output to thuthesis-example.bbl
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'li2017rib' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'wu2017infill' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'schumacher2018set' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'gaynor2016topology' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'dou2020top' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'kingma2019introduction' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'guo2014doing' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'xie1993' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - Duplicate entry key: 'bendsoe2003' in file 'ref/refs.bib', skipping ...
+[1619] Biber.pm:131> WARN - legacy month field 'jul' in entry '10.1145/2601097.2601168' is not an integer - this will probably not sort properly.
+[1619] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_MVHw\8fe4c9854184545302f21ebf0d47516c_250036.utf8, line 1174, warning: undefined macro "cgforum"
+[1619] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_MVHw\8fe4c9854184545302f21ebf0d47516c_250036.utf8, line 1189, warning: undefined macro "tog"
+[1619] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_MVHw\8fe4c9854184545302f21ebf0d47516c_250036.utf8, line 1210, warning: undefined macro "cgforum"
+[1619] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_MVHw\8fe4c9854184545302f21ebf0d47516c_250036.utf8, line 1235, warning: undefined macro "cgforum"
+[1619] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\91564\AppData\Local\Temp\biber_tmp_MVHw\8fe4c9854184545302f21ebf0d47516c_250036.utf8, line 1248, warning: undefined macro "tog"
+[1619] Biber.pm:133> INFO - WARNINGS: 15
