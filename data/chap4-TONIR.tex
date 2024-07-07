@@ -461,3 +461,81 @@ IF-TONIR算法表明，一旦神经网络经过充分训练并收敛，可以通
         \STATE \textbf{步骤 8:} 从SDF中提取结构: $\mathbf{s}^*$
     \end{algorithmic}
 \end{algorithm}
+
+\section{实验和分析}
+
+\subsection{超参数设置和收敛性}
+本算法所用的训练数据集包含 26796 个样本，涵盖了 图~\ref{fig:datasets} 所示的设计领域。对于每个训练 epoch，随机选择 21437 个样本 (占 80\%) 用于训练，5359 个样本 (占 20\%) 用于验证。模型在包含 924 个样本的测试数据集上进行评估，这些样本来自未见过的设计领域。
+
+模型根据 算法~\ref{alg:algorithm1} 在配备 Nvidia A40 GPU 的机器上进行训练，使用 Adam 优化器，初始学习率为 0.001，每 20 个 epoch 将学习率减少 0.5 倍。在训练过程中，将结构刚度作为损失函数或准确性指标是非常耗时的。尽管 TopoDiff~\cite{maze2022} 提出了一个回归模型来预测生成结构的刚度，但需要额外的数据准备和网络训练。因此，使用 IoU 指标来监控训练过程，将来会将物理量监督纳入考虑。 图~\ref{fig:training} 展示了训练过程中损失和 IoU 准确性的稳定收敛。可以观察到，随着训练的进行，生成的结构逐渐变得更加合理和稳健。大约需要 150 个 epoch 才能得到 IoU 准确性约为 94\% 的预测结果。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{./figures/TONIR/fig-convergence.png}
+    \caption{IF-TONIR的训练过程}
+    \label{fig:training}
+\end{figure}
+
+\subsection{性能评估}
+完成训练后，评估生成结构在结构刚度和体积方面的准确性。如 图~\ref{fig:eval-train} 所示，IF-TONIR 成功预测出了与训练数据集中 GT 样本非常相似的结构，它准确地识别了设计域的形状以及施加载荷的位置。在整个训练数据集上，IF-TONIR 的平均刚度误差为 6.90\%，平均体积误差为 1.32\%。为验证 IF-TONIR 的有效性，在测试数据集上评估其性能，如 图~\ref{fig:eval-test} 所示。测试数据集的平均刚度误差为 54.2\%，平均体积误差为 4.02\%。值得注意的是，测试数据集包含了两种训练过程中未观察到的设计域形状。因此，测试数据集中的边界条件位置与训练数据集完全不同。据悉，该算法是首个将设计域形状作为泛化能力一部分的算法。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{./figures/TONIR/results-train.png}
+    \caption{训练数据集上的测试结果}
+    \label{fig:eval-train}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{./figures/TONIR/results-test.png}
+    \caption{测试数据集上的测试结果}
+    \label{fig:eval-test}
+\end{figure}
+
+
+\subsection{消融实验}
+\paragraph{拓扑损失。}
+结构不连续性常会导致不稳定或高刚度，图~\ref{fig:topo-comparison} 说明了拓扑损失在改善生成结构的结构连续性方面的有效性。由于采用结构的 SDFs 作为计算持续同调的过滤值，所得到的 PD 可以有效捕捉数据的几何和拓扑特征。连续的过滤值场使训练过程更加稳定，从而使网络生成的结构能够与 GT 样本非常相似。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{./figures/TONIR/abla-topo.png}
+    \caption{拓扑损失的消融实验结果}
+    \label{fig:topo-comparison}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{./figures/TONIR/abla-pp.png}
+    \caption{点属性和物理场的消融实验结果}
+    \label{fig:ablation}
+\end{figure}
+
+\paragraph{点属性。}
+确定特定点的 SDF 值时，将设计形状信息和体积约束作为点属性，与坐标一起使用。这些点属性还可包括载荷位置和位移约束。本方法不同于之前的方法在于将体积约束作为解码器中点属性的一部分，而非复制以匹配输入张量大小。未使用点属性的对照实验表明其关键作用，如 图\ref{fig:ablation} 所示。通过对其值应用高频变换(如公式~\eqref{eq:pe}中的位置编码)增强算法中点属性的影响。消融实验验证位置编码的重要性，结果表明位置编码层有助于网络预测更准确的体积和力的施加位置。使用位置编码的平均刚度几乎只有未使用位置编码的六分之一，表明结构强度更高，如 图~\ref{fig:ablation} 中的几个示例所示。
+
+\paragraph{物理场。}
+之前的工作已证实，原始设计域上的物理场信息在预测最优结构方面发挥着积极作用。为说明其对算法的重要性，如 图~\ref{fig:ablation} 所示，从物理信息中删除应力和应变能场后出现的不利影响。
+
+\subsection{比较实验}
+本节对 IF-TONIR 与其他生成模型(TopologyGAN~\cite{topologygan2021}和 TopoDiff~\cite{maze2022})进行了比较分析。值得注意的是，这些先前的工作未考虑设计域形状。为确保公平比较，这里在 TopoDiff 提供的相同数据集上评估了这三个模型。由于该数据集中的结构是在固定的规则设计域上生成的，只需从 IF-TONIR 中删除与域相关的信息，即可在提供的数据集上进行训练和评估。图~\ref{fig:comparison} 展示了 IF-TONIR、TopologyGAN 和 TopoDiff 之间的比较结果。
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\linewidth]{./figures/TONIR/results-comparison.png}
+    \caption{IF-TONIR与其他生成模型的比较}
+    \label{fig:comparison}
+\end{figure}
+
+作为最受欢迎的生成模型之一，扩散模型已被证明在捕捉图像或形状生成中的细节方面具有更强的能力，如 图~\ref{fig:comparison} 所示。此外，TopoDiff 框架结合了三个子网络来增强生成结构的强度和连续性。因此，从图~\ref{fig:comparison} 中的表格可以观察到，TopoDiff 目前取得了最佳性能。但需要注意的是，TopoDiff 在所比较的模型中具有最高的复杂度，生成结构需要更长的推理时间，需要 21.59 秒，而 IF-TONIR 只需 0.09 秒(在 CPU 上)。此外，将扩散模型扩展到 3D 域存在计算效率和内存利用方面的挑战。相比之下，IF-TONIR 在更轻的网络架构下取得了优于 GAN 模型的结果。众所周知，训练 GAN 模型是一项艰难的任务。该框架还展示了跨不同形状设计域进行推广的能力，这在之前的工作中未被考虑。然而，与其他 VAE 模型类似，IF-TONIR 在生成具有细节的结构方面仍有局限性，这是未来工作的重点领域。
+
+TopologyGAN 和 TopoDiff 要求输入和输出分辨率保持一致，这在生成高分辨率结构时会带来挑战。这需要准备一个新的高分辨率样本数据集，或采用超分辨率等技术。然而，由于 IF-TONIR 使用了隐式神经表示，可以以任意所需的分辨率获得结构。如图~\ref{fig:resolution} 所示，训练好的网络允许通过增加设计域内的采样点数来生成更高分辨率的结构。值得注意的是，IF-TONIR 可以在 CPU 上以约 10 秒的时间生成 1024 分辨率的结构。与传统的 SIMP 方法相比，该方法消除了获得平滑和连续结构表示的后处理需求。需要澄清的是，这里的分辨率指最终结构表示的分辨率，而不是结构特征的分辨率，提高结构表示的分辨率并不会增加更多的结构细节。
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{./figures/TONIR/fig-resolution.png}
+    \caption{IF-TONIR可以生成任意分辨率下的结构}
+    \label{fig:resolution}
+\end{figure}
+
+\section{本章小结}
+本文提出了 IF-TONIR，一种全新的无迭代拓扑优化方法。该算法利用隐式神经表示直接从给定条件和问题配置中生成优化结构。通过在测试数据集上的实验，IF-TONIR 展示了在生成各种类似形状设计域的优化结构方面的有效性，实现了较低的结构柔度。据悉，这是首个将拓扑优化过程推广到不同设计域形状的端到端工作。利用隐式神经表示将网络与空间网格解耦，理论上可以以任意所需的分辨率生成结构。此外，这种平滑紧凑的表示方法有效避免了棋盘现象。综上，本章算法在提高拓扑优化效率和应用性上主要有以下贡献：
+\begin{itemize}
+    \item 提出了一种全新的无迭代拓扑优化方法，可以直接从各种设计域形状和边界条件中输出最优结构。
+    \item 除了常用的几何损失外，还引入了基于持续同调的拓扑损失，以量化结构的连续性，有效检测和测量即使是微小的结构断开。
+    \item IF-TONIR 生成了结构的紧凑平滑的隐式表示，将设计过程与空间网格分离，理论上可以以任意所需的分辨率生成结构。
+\end{itemize}
